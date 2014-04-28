@@ -18,6 +18,17 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 
 " Bundles
 " =======
+
+NeoBundle 'bling/vim-airline'
+
+NeoBundle 'bling/vim-bufferline'
+
+NeoBundle 'Lokaltog/vim-easymotion'
+
+NeoBundle 'ap/vim-css-color'
+
+NeoBundle 'mhinz/vim-signify'
+
 NeoBundle 'Shougo/vimproc.vim', {
     \ 'build' : {
     \     'windows' : 'make -f make_mingw32.mak',
@@ -27,15 +38,13 @@ NeoBundle 'Shougo/vimproc.vim', {
     \    }
     \ }
 
-NeoBundleLazy 'Shougo/unite.vim', {
-    \ 'commands' : [{ 'name' : 'Unite',
-    \                 'complete' : 'customlist,unite#complete_source'},
-    \                 'UniteWithCursorWord', 'UniteWithInput']
-    \ }
+NeoBundle 'Shougo/unite.vim'
 
-NeoBundle 'bling/vim-airline'
-NeoBundle 'bling/vim-bufferline'
-NeoBundle 'Lokaltog/vim-easymotion'
+NeoBundle 'tpope/vim-fugitive'
+
+NeoBundle 'tpope/vim-repeat'
+
+NeoBundle 'tpope/vim-surround'
 
 " load plugins
 call neobundle#end()
@@ -119,6 +128,11 @@ syntax on
 " -------
 let g:airline_left_sep=''
 let g:airline_right_sep=''
+
+" Signify
+" -------
+let g:signify_vcs_list = [ 'git' ]
+
 
 " EasyMotion
 " ----------
