@@ -40,6 +40,8 @@ NeoBundle 'Shougo/vimproc.vim', {
 
 NeoBundle 'Shougo/unite.vim'
 
+NeoBundle 'plasticboy/vim-markdown'
+
 NeoBundle 'tpope/vim-fugitive'
 
 NeoBundle 'tpope/vim-repeat'
