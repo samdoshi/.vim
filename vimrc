@@ -125,6 +125,29 @@ colorscheme base16-custom
 " enable syntax highlighting
 syntax on
 
+" GUI Options
+" ===========
+if has("gui_running")
+    " hide any gui toolbars
+    set guioptions-=T
+    " hide scroll bars
+    set guioptions-=l
+    set guioptions-=r
+    set guioptions-=R
+    set guioptions-=L
+    set guifont=Menlo:h14
+endif
+
+" Terminal Options
+" ================
+if exists('$TMUX')
+    let &t_SI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=1\x7\<Esc>\\"
+    let &t_EI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=0\x7\<Esc>\\"
+else
+    let &t_SI = "\<Esc>]50;CursorShape=1\x7"
+    let &t_EI = "\<Esc>]50;CursorShape=0\x7"
+endif
+
 " Plugins
 " =======
 
