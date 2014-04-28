@@ -1,5 +1,34 @@
-" drop vi support, enables enhanced vim features
-set nocompatible
+" using https://github.com/Shougo/neobundle.vim
+" to install enter the following on the command line
+" git clone https://github.com/Shougo/neobundle.vim ~/.vim/bundle/neobundle.vim
+
+if has('vim_starting')
+    " drop vi support, enables enhanced vim features
+    set nocompatible
+
+    " add neobundle to run time path
+    set runtimepath+=~/.vim/bundle/neobundle.vim/
+endif
+
+" start neobundle
+call neobundle#begin(expand('~/.vim/bundle/'))
+
+" let neobundle mange itself
+NeoBundleFetch 'Shougo/neobundle.vim'
+
+" Bundles
+" =======
+
+" load plugins
+call neobundle#end()
+
+" required by neobundle
+filetype plugin indent on
+
+NeoBundleCheck
+
+" VIM Settings
+" ============
 
 " auto indent
 set autoindent
