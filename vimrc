@@ -29,6 +29,8 @@ NeoBundle 'ap/vim-css-color'
 
 NeoBundle 'mhinz/vim-signify'
 
+NeoBundle 'scrooloose/syntastic'
+
 NeoBundle 'Shougo/vimproc.vim', {
     \ 'build' : {
     \     'windows' : 'make -f make_mingw32.mak',
