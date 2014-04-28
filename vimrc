@@ -18,6 +18,24 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 
 " Bundles
 " =======
+NeoBundle 'Shougo/vimproc.vim', {
+    \ 'build' : {
+    \     'windows' : 'make -f make_mingw32.mak',
+    \     'cygwin' : 'make -f make_cygwin.mak',
+    \     'mac' : 'make -f make_mac.mak',
+    \     'unix' : 'make -f make_unix.mak',
+    \    }
+    \ }
+
+NeoBundleLazy 'Shougo/unite.vim', {
+    \ 'commands' : [{ 'name' : 'Unite',
+    \                 'complete' : 'customlist,unite#complete_source'},
+    \                 'UniteWithCursorWord', 'UniteWithInput']
+    \ }
+
+NeoBundle 'bling/vim-airline'
+NeoBundle 'bling/vim-bufferline'
+NeoBundle 'Lokaltog/vim-easymotion'
 
 " load plugins
 call neobundle#end()
@@ -87,8 +105,45 @@ set clipboard=unnamed
 " use linebreak as word wrap mode
 set linebreak
 
+" colour scheme
+set background=dark
+colorscheme base16-custom
+
 " enable syntax highlighting
 syntax on
+
+" Plugins
+" =======
+
+" Airline
+" -------
+let g:airline_left_sep=''
+let g:airline_right_sep=''
+
+" EasyMotion
+" ----------
+" disable default mappings
+let g:EasyMotion_do_mapping = 0
+" don't move to start of line with j & k
+let g:EasyMotion_startofline = 0
+
+" mappings
+map <Space>s <Plug>(easymotion-s)
+map <Space>w <Plug>(easymotion-bd-w)
+map <Space>t <Plug>(easymotion-bd-t)
+map <Space>h <Plug>(easymotion-linebackward)
+map <Space>l <Plug>(easymotion-lineforward)
+
+map <Space>j <Plug>(easymotion-j)
+map <Space>k <Plug>(easymotion-k)
+map <Leader>J <Plug>(easymotion-sol-j)
+map <Leader>K <Plug>(easymotion-sol-k)
+
+" colours
+hi link EasyMotionTarget Constant
+hi link EasyMotionShade Comment
+hi link EasyMotionTarget2First Constant
+hi link EasyMotionTarget2Second PreProc
 
 
 " Key Mappings
