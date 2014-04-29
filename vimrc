@@ -23,6 +23,8 @@ NeoBundle 'bling/vim-airline'
 
 NeoBundle 'bling/vim-bufferline'
 
+NeoBundle 'dag/vim2hs'
+
 NeoBundle 'Lokaltog/vim-easymotion'
 
 NeoBundle 'ap/vim-css-color'
@@ -43,6 +45,8 @@ NeoBundle 'Shougo/vimproc.vim', {
 NeoBundle 'Shougo/unite.vim'
 
 NeoBundle 'plasticboy/vim-markdown'
+
+NeoBundle 'tpope/vim-dispatch'
 
 NeoBundle 'tpope/vim-fugitive'
 
