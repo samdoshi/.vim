@@ -259,7 +259,7 @@ call <sid>hi("markdownHeadingDelimiter",  s:gui0D, "", s:cterm0D, "", "")
 " Git highlighting
 call <sid>hi("gitCommitOverflow",  s:gui08, "", s:cterm08, "", "")
 call <sid>hi("gitCommitSummary",   s:gui0B, "", s:cterm0B, "", "")
-  
+
 " GitGutter highlighting
 call <sid>hi("GitGutterAdd",     s:gui0B, s:gui01, s:cterm0B, s:cterm01, "")
 call <sid>hi("GitGutterChange",  s:gui0D, s:gui01, s:cterm0D, s:cterm01, "")
@@ -274,6 +274,25 @@ call <sid>hi("SignifySignDelete",  s:gui08, s:gui01, s:cterm08, s:cterm01, "")
 " NERDTree highlighting
 call <sid>hi("NERDTreeDirSlash",  s:gui0D, "", s:cterm0D, "", "")
 call <sid>hi("NERDTreeExecFile",  s:gui05, "", s:cterm05, "", "")
+
+" Base16 theme highlighting
+call <sid>hi("Base16Base00", s:gui01, s:gui00, s:cterm01, s:cterm00, "")
+call <sid>hi("Base16Base01", s:gui00, s:gui01, s:cterm00, s:cterm01, "")
+call <sid>hi("Base16Base02", s:gui00, s:gui02, s:cterm00, s:cterm02, "")
+call <sid>hi("Base16Base03", s:gui00, s:gui03, s:cterm00, s:cterm03, "")
+call <sid>hi("Base16Base04", s:gui00, s:gui04, s:cterm00, s:cterm04, "")
+call <sid>hi("Base16Base05", s:gui00, s:gui05, s:cterm00, s:cterm05, "")
+call <sid>hi("Base16Base06", s:gui00, s:gui06, s:cterm00, s:cterm06, "")
+call <sid>hi("Base16Base07", s:gui00, s:gui07, s:cterm00, s:cterm07, "")
+call <sid>hi("Base16Base08", s:gui00, s:gui08, s:cterm00, s:cterm08, "")
+call <sid>hi("Base16Base09", s:gui00, s:gui09, s:cterm00, s:cterm09, "")
+call <sid>hi("Base16Base0A", s:gui00, s:gui0A, s:cterm00, s:cterm0A, "")
+call <sid>hi("Base16Base0B", s:gui00, s:gui0B, s:cterm00, s:cterm0B, "")
+call <sid>hi("Base16Base0C", s:gui00, s:gui0C, s:cterm00, s:cterm0C, "")
+call <sid>hi("Base16Base0D", s:gui00, s:gui0D, s:cterm00, s:cterm0D, "")
+call <sid>hi("Base16Base0E", s:gui00, s:gui0E, s:cterm00, s:cterm0E, "")
+call <sid>hi("Base16Base0F", s:gui00, s:gui0F, s:cterm00, s:cterm0F, "")
+
 
 " Remove functions
 delf <sid>hi
