@@ -209,6 +209,12 @@ inoremap kj <esc>
 nmap ,ve :e $MYVIMRC<cr>
 nmap ,vs :so $MYVIMRC<cr>
 nmap ,vh :so $VIMRUNTIME/syntax/hitest.vim<cr>
+nmap <silent> ,vg
+ \ :echo "hi<".synIDattr(synID(line("."),col("."),1),"name").'>'
+ \ . ' trans<' . synIDattr(synID(line("."),col("."),0),"name") . "> lo<"
+ \ . synIDattr(synIDtrans(synID(line("."),col("."),1)),"name") . ">"
+ \ <CR>:execute "highlight " .
+ \ synIDattr(synIDtrans(synID(line("."),col("."),1)),"name")<CR>
 
 " Quickfix make
 nmap ,q :wa\|silent!\|make!\|redraw!\|botright cwindow<cr>
