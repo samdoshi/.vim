@@ -152,6 +152,10 @@ else
     let &t_EI = "\<Esc>]50;CursorShape=0\x7"
 endif
 
+" enable terminal italics
+let &t_ZH = "\<Esc>[3m"
+let &t_ZR = "\<Esc>[23m"
+
 " Plugins
 " =======
 
