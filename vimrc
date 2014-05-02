@@ -25,6 +25,8 @@ NeoBundle 'bling/vim-bufferline'
 
 NeoBundle 'dag/vim2hs'
 
+NeoBundle 'eagletmt/neco-ghc'
+
 NeoBundle 'Lokaltog/vim-easymotion'
 
 NeoBundle 'ap/vim-css-color'
@@ -32,6 +34,8 @@ NeoBundle 'ap/vim-css-color'
 NeoBundle 'mhinz/vim-signify'
 
 NeoBundle 'scrooloose/syntastic'
+
+NeoBundle 'Shougo/neocomplete.vim'
 
 NeoBundle 'Shougo/vimproc.vim', {
     \ 'build' : {
@@ -53,8 +57,6 @@ NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'tpope/vim-repeat'
 
 NeoBundle 'tpope/vim-surround'
-
-NeoBundle 'Valloric/YouCompleteMe'
 
 " load plugins
 call neobundle#end()
@@ -195,6 +197,19 @@ hi link EasyMotionTarget Constant
 hi link EasyMotionShade Comment
 hi link EasyMotionTarget2First Constant
 hi link EasyMotionTarget2Second PreProc
+
+" Neco-GHC
+let g:necoghc_enable_detailed_browse = 1
+
+" Neocomplete
+" -----------
+" Use neocomplete.
+let g:neocomplete#enable_at_startup = 1
+" Use smartcase.
+let g:neocomplete#enable_smart_case = 1
+" <TAB>: completion.
+inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
+
 
 " Unite
 " -----
