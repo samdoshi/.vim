@@ -194,6 +194,10 @@ hi link EasyMotionShade Comment
 hi link EasyMotionTarget2First Constant
 hi link EasyMotionTarget2Second PreProc
 
+" Unite
+" -----
+let g:unite_split_rule='botright'
+nnoremap ,h :<C-u>Unite -start-insert buffer file_rec/async:!<cr>
 
 " Key Mappings
 " ============
