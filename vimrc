@@ -54,6 +54,8 @@ NeoBundle 'tpope/vim-repeat'
 
 NeoBundle 'tpope/vim-surround'
 
+NeoBundle 'Valloric/YouCompleteMe'
+
 " load plugins
 call neobundle#end()
 
