@@ -58,6 +58,8 @@ NeoBundle 'tpope/vim-repeat'
 
 NeoBundle 'tpope/vim-surround'
 
+NeoBundle 'tsukkee/unite-tag'
+
 " load plugins
 call neobundle#end()
 
@@ -210,11 +212,21 @@ let g:neocomplete#enable_smart_case = 1
 " <TAB>: completion.
 inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
 
-
 " Unite
 " -----
-let g:unite_split_rule='botright'
-nnoremap ,h :<C-u>Unite -start-insert buffer file_rec/async:!<cr>
+let g:unite_split_rule = 'botright'
+
+" file related
+call unite#custom#profile('files', 'ignorecase', 1)
+nnoremap ,f :<C-u>Unite -buffer-name=files -profile-name=files -start-insert
+            \ file_rec/async:!<cr>
+
+" buffer related
+nnoremap ,b :<C-u>Unite -quick-match buffer<cr>
+
+" other
+let g:unite_source_history_yank_enable = 1
+nnoremap ,y :<C-u>Unite history/yank<cr>
 
 " Key Mappings
 " ============
