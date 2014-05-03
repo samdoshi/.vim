@@ -178,7 +178,7 @@ call <sid>hi("Define",                      s:gui0E, ""     , s:cterm0E, ""     
 call <sid>hi("Delimiter",                   s:gui0F, ""     , s:cterm0F, ""       , "")
 call <sid>hi("Float",                       s:gui09, ""     , s:cterm09, ""       , "")
 call <sid>hi("Function",                    s:gui0E, ""     , s:cterm0E, ""       , "bold")
-call <sid>hi("Identifier",                  s:gui08, ""     , s:cterm08, ""       , "")
+call <sid>hi("Identifier",                  s:gui0D, ""     , s:cterm0D, ""       , "")
 call <sid>hi("Include",                     s:gui0D, ""     , s:cterm0D, ""       , "")
 call <sid>hi("Keyword",                     s:gui0E, ""     , s:cterm0E, ""       , "")
 call <sid>hi("Label",                       s:gui0A, ""     , s:cterm0A, ""       , "")
