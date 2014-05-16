@@ -60,6 +60,8 @@ NeoBundle 'tpope/vim-surround'
 
 NeoBundle 'tsukkee/unite-tag'
 
+NeoBundle 'wting/rust.vim'
+
 " load plugins
 call neobundle#end()
 
