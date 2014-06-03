@@ -25,6 +25,8 @@ NeoBundle 'bling/vim-bufferline'
 
 NeoBundle 'dag/vim2hs'
 
+NeoBundle 'eagletmt/ghcmod-vim'
+
 NeoBundle 'eagletmt/neco-ghc'
 
 NeoBundle 'Lokaltog/vim-easymotion'
@@ -32,8 +34,6 @@ NeoBundle 'Lokaltog/vim-easymotion'
 NeoBundle 'ap/vim-css-color'
 
 NeoBundle 'mhinz/vim-signify'
-
-NeoBundle 'scrooloose/syntastic'
 
 NeoBundle 'Shougo/neocomplete.vim'
 
@@ -229,6 +229,14 @@ nnoremap ,b :<C-u>Unite -quick-match buffer<cr>
 " other
 let g:unite_source_history_yank_enable = 1
 nnoremap ,y :<C-u>Unite history/yank<cr>
+
+" Vim2HS / Haskell
+" ----------------
+autocmd Syntax haskell setlocal foldlevel=2
+autocmd Syntax haskell setlocal foldcolumn=1
+autocmd FileType haskell compiler cabal
+autocmd FileType haskell setlocal makeprg=cabal\ build\ -v0
+autocmd BufWritePost *.hs GhcModCheckAsync
 
 " Key Mappings
 " ============
