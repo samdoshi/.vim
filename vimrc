@@ -263,8 +263,9 @@ nmap <silent> ,vg
  \ <CR>:execute "highlight " .
  \ synIDattr(synIDtrans(synID(line("."),col("."),1)),"name")<CR>
 
-" Quickfix make
-nmap ,q :wa\|silent!\|make!\|redraw!\|botright cwindow<cr>
+" Compile commands
+nmap ,cm :Make<cr>
+nmap ,cc :cclose<cr>
 
 " don't allow arrow keys
 noremap <up> <nop>
