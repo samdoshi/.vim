@@ -177,7 +177,7 @@ call <sid>hi("Constant",                    s:gui09, ""     , s:cterm09, ""     
 call <sid>hi("Define",                      s:gui0E, ""     , s:cterm0E, ""       , "none")
 call <sid>hi("Delimiter",                   s:gui0F, ""     , s:cterm0F, ""       , "")
 call <sid>hi("Float",                       s:gui09, ""     , s:cterm09, ""       , "")
-call <sid>hi("Function",                    s:gui0E, ""     , s:cterm0E, ""       , "bold")
+call <sid>hi("Function",                    s:gui0E, ""     , s:cterm0E, ""       , "")
 call <sid>hi("Identifier",                  s:gui0D, ""     , s:cterm0D, ""       , "")
 call <sid>hi("Include",                     s:gui0D, ""     , s:cterm0D, ""       , "")
 call <sid>hi("Keyword",                     s:gui0E, ""     , s:cterm0E, ""       , "")
@@ -214,7 +214,12 @@ call <sid>hi("DiffNewFile",                 s:gui0B, s:gui00, s:cterm0B, s:cterm
 call <sid>hi("DiffLine",                    s:gui0D, s:gui00, s:cterm0D, s:cterm00, "")
 call <sid>hi("DiffRemoved",                 s:gui08, s:gui00, s:cterm08, s:cterm00, "")
 
+" Python highlighting
 call <sid>hi("pythonBuiltin",               s:gui0D, ""     , s:cterm0D, ""       , "")
+
+" Rust highlighting
+call <sid>hi("rustMacro",                   s:gui0D, ""     , s:cterm0D, ""       , "")
+call <sid>hi("rustFuncName",                s:gui06, ""     , s:cterm06, ""       , "")
 
 " Ruby highlighting
 call <sid>hi("rubyAttribute",               s:gui0D, ""     , s:cterm0D, ""       , "")
