@@ -219,7 +219,7 @@ call <sid>hi("pythonBuiltin",               s:gui0D, ""     , s:cterm0D, ""     
 
 " Rust highlighting
 call <sid>hi("rustMacro",                   s:gui0D, ""     , s:cterm0D, ""       , "")
-call <sid>hi("rustFuncName",                s:gui06, ""     , s:cterm06, ""       , "")
+call <sid>hi("rustFuncName",                s:gui05, ""     , s:cterm05, ""       , "underline")
 
 " Ruby highlighting
 call <sid>hi("rubyAttribute",               s:gui0D, ""     , s:cterm0D, ""       , "")
