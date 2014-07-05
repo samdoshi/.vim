@@ -19,6 +19,8 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 " Bundles
 " =======
 
+NeoBundle 'ap/vim-css-color'
+
 NeoBundle 'bling/vim-airline'
 
 NeoBundle 'bling/vim-bufferline'
@@ -31,11 +33,11 @@ NeoBundle 'eagletmt/neco-ghc'
 
 NeoBundle 'Lokaltog/vim-easymotion'
 
-NeoBundle 'ap/vim-css-color'
-
 NeoBundle 'mhinz/vim-signify'
 
 NeoBundle 'Shougo/neocomplete.vim'
+
+NeoBundle 'Shougo/vimfiler.vim'
 
 NeoBundle 'Shougo/vimproc.vim', {
     \ 'build' : {
@@ -230,6 +232,10 @@ nnoremap ,b :<C-u>Unite -quick-match buffer<cr>
 let g:unite_source_history_yank_enable = 1
 nnoremap ,y :<C-u>Unite history/yank<cr>
 
+" VimFiler
+autocmd FileType vimfiler setlocal nonumber
+autocmd FileType vimfiler setlocal norelativenumber
+
 " Vim2HS / Haskell
 " ----------------
 autocmd Syntax haskell setlocal foldlevel=2
@@ -266,6 +272,7 @@ nmap <silent> ,vg
 " Compile commands
 nmap ,cm :Make<cr>
 nmap ,cc :cclose<cr>
+nmap ,cf :<C-u>VimFilerExplorer -toggle -winwidth=30<CR>
 
 " don't allow arrow keys
 noremap <up> <nop>
