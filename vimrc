@@ -133,14 +133,12 @@ set clipboard=unnamed
 set linebreak
 
 " colour scheme
-set background=dark
-colorscheme base16-custom
 
 " enable syntax highlighting
 syntax on
 
-" GUI Options
-" ===========
+" GUI / Terminal Options
+" ======================
 if has("gui_running")
     " hide any gui toolbars
     set guioptions-=T
@@ -150,6 +148,12 @@ if has("gui_running")
     set guioptions-=R
     set guioptions-=L
     set guifont=Menlo:h14
+
+    set background=light
+    colorscheme base16-custom
+else
+    set background=dark
+    colorscheme base16-custom
 endif
 
 " Terminal Options
