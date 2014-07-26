@@ -123,6 +123,10 @@ set wildignore=*.o,*.obj,.git,.svn,*.pyc,*env/*
 " scroll around the cursor
 set scrolloff=3
 
+" visually indicate insert mode with cursorline
+autocmd InsertEnter * set cursorline
+autocmd InsertLeave * set nocursorline
+
 " required for powerline unicode symbols
 set encoding=utf-8
 
