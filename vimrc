@@ -35,6 +35,8 @@ NeoBundle 'Lokaltog/vim-easymotion'
 
 NeoBundle 'mhinz/vim-signify'
 
+NeoBundle 'mhinz/vim-startify'
+
 NeoBundle 'Shougo/neocomplete.vim'
 
 NeoBundle 'Shougo/vimfiler.vim'
@@ -186,6 +188,19 @@ let g:airline_right_sep=''
 " -------
 let g:signify_vcs_list = [ 'git' ]
 
+" Startify
+" --------
+let g:startify_custom_header = map(split(system('fortune -s -n 300 | cowsay'), '\n'), '"   ". v:val') + ['','']
+let g:startify_custom_footer = [
+    \ '',
+    \ '   ,b   unite buffer',
+    \ '   ,f   unite files',
+    \ '   ,y   unite yankring',
+    \ '',
+    \ '   ,cm  make',
+    \ '   ,cc  close quickfix',
+    \ '   ,cf  vimfiler',
+    \ ]
 
 " EasyMotion
 " ----------
