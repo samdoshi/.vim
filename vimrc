@@ -275,6 +275,9 @@ autocmd BufWritePost *.hs GhcModCheckAsync
 " use \ as leader, but map all our keys to , this is to stop plugins interfering with our keystrokes
 let mapleader="\\"
 
+" disable Q -> ex mode
+nnoremap Q <nop>
+
 " use ,, as a single ,
 nnoremap ,, ,
 
