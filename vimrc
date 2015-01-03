@@ -244,7 +244,7 @@ inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
 let g:unite_split_rule = 'botright'
 
 " file related
-call unite#custom#profile('files', 'ignorecase', 1)
+call unite#custom#profile('files', 'context.ignorecase', 1)
 let g:unite_source_rec_async_command =
                 \ 'ag --follow --nocolor --nogroup -g ""'
 nnoremap ,f :<C-u>Unite -buffer-name=files -profile-name=files -start-insert
