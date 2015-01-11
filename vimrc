@@ -64,6 +64,8 @@ NeoBundle 'tpope/vim-surround'
 
 NeoBundle 'tsukkee/unite-tag'
 
+NeoBundle 'vim-scripts/openscad.vim'
+
 NeoBundle 'wting/rust.vim'
 
 " load plugins
