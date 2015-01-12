@@ -31,6 +31,8 @@ NeoBundle 'eagletmt/ghcmod-vim'
 
 NeoBundle 'eagletmt/neco-ghc'
 
+NeoBundle 'fmoralesc/vim-pad'
+
 NeoBundle 'Lokaltog/vim-easymotion'
 
 NeoBundle 'mhinz/vim-signify'
@@ -230,6 +232,7 @@ hi link EasyMotionTarget2First Constant
 hi link EasyMotionTarget2Second PreProc
 
 " Neco-GHC
+" --------
 let g:necoghc_enable_detailed_browse = 1
 
 " Neocomplete
@@ -260,6 +263,7 @@ let g:unite_source_history_yank_enable = 1
 nnoremap ,y :<C-u>Unite history/yank<cr>
 
 " VimFiler
+" --------
 autocmd FileType vimfiler setlocal nonumber
 autocmd FileType vimfiler setlocal norelativenumber
 
@@ -270,6 +274,14 @@ autocmd Syntax haskell setlocal foldcolumn=1
 autocmd FileType haskell compiler cabal
 autocmd FileType haskell setlocal makeprg=cabal\ build\ -v0
 autocmd BufWritePost *.hs GhcModCheckAsync
+
+" vim-pad
+" -------
+let g:pad#dir = "~/Dropbox/Notes/"
+let g:pad#set_mappings = 0
+let g:pad#open_in_split = 0
+let g:pad#search_backend = 'ag'
+nnoremap ,p :<C-u>Pad ls<cr>
 
 " Key Mappings
 " ============
