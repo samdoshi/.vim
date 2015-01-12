@@ -296,6 +296,9 @@ let g:pad#search_backend = 'ag'
 let g:pad#highlight_query = 0
 let g:pad#jumpto_query = 0
 let g:pad#default_file_extension = '.md'
+let g:pad#window_height = 20
+let g:pad#query_filenames = 1
+let g:pad#rename_files = 0
 nnoremap ,p :<C-u>Pad ls<cr>
 
 " Key Mappings
