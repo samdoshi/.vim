@@ -200,11 +200,19 @@ let g:startify_custom_footer = [
     \ '   ,b   unite buffer',
     \ '   ,f   unite files',
     \ '   ,y   unite yankring',
+    \ '   ,p   pad ls',
     \ '',
     \ '   ,cm  make',
     \ '   ,cc  close quickfix',
     \ '   ,cf  vimfiler',
     \ ]
+
+function StartifiedPadLS()
+    :bd
+    :Pad ls
+endfunction
+
+autocmd User Startified nmap <buffer> ,p :<C-u>exec StartifiedPadLS()<CR>
 
 " EasyMotion
 " ----------
