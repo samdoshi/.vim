@@ -281,10 +281,13 @@ autocmd BufWritePost *.hs GhcModCheckAsync
 
 " vim-pad
 " -------
-let g:pad#dir = "~/Dropbox/Notes/"
+let g:pad#dir = '~/Dropbox/Notes/'
 let g:pad#set_mappings = 0
 let g:pad#open_in_split = 0
 let g:pad#search_backend = 'ag'
+let g:pad#highlight_query = 0
+let g:pad#jumpto_query = 0
+let g:pad#default_file_extension = '.md'
 nnoremap ,p :<C-u>Pad ls<cr>
 
 " Key Mappings
