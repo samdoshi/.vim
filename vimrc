@@ -188,6 +188,10 @@ let &t_ZR = "\<Esc>[23m"
 let g:airline_left_sep=''
 let g:airline_right_sep=''
 
+" Bufferline
+" ----------
+let g:bufferline_show_bufnr = 0
+
 " Signify
 " -------
 let g:signify_vcs_list = [ 'git' ]
