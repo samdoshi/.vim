@@ -231,6 +231,10 @@ hi link EasyMotionShade Comment
 hi link EasyMotionTarget2First Constant
 hi link EasyMotionTarget2Second PreProc
 
+" Markdown
+" --------
+let g:vim_markdown_folding_disabled=1
+
 " Neco-GHC
 " --------
 let g:necoghc_enable_detailed_browse = 1
