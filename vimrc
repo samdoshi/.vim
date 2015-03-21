@@ -142,7 +142,8 @@ set clipboard=unnamed
 " use linebreak as word wrap mode
 set linebreak
 
-" colour scheme
+" disable folding
+set foldlevelstart=99
 
 " enable syntax highlighting
 syntax on
