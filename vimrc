@@ -25,14 +25,6 @@ NeoBundle 'bling/vim-airline'
 
 NeoBundle 'bling/vim-bufferline'
 
-NeoBundle 'dag/vim2hs'
-
-NeoBundle 'eagletmt/ghcmod-vim'
-
-NeoBundle 'eagletmt/neco-ghc'
-
-NeoBundle 'fmoralesc/vim-pad'
-
 NeoBundle 'Lokaltog/vim-easymotion'
 
 NeoBundle 'mhinz/vim-signify'
@@ -65,10 +57,6 @@ NeoBundle 'tpope/vim-repeat'
 NeoBundle 'tpope/vim-surround'
 
 NeoBundle 'tsukkee/unite-tag'
-
-NeoBundle 'vim-scripts/openscad.vim'
-
-NeoBundle 'wting/rust.vim'
 
 " load plugins
 call neobundle#end()
@@ -202,22 +190,14 @@ let g:signify_vcs_list = [ 'git' ]
 let g:startify_custom_header = map(split(system('fortune -s -n 300 | cowsay'), '\n'), '"   ". v:val') + ['','']
 let g:startify_custom_footer = [
     \ '',
-    \ '   ,b   unite buffer',
-    \ '   ,f   unite files',
-    \ '   ,y   unite yankring',
-    \ '   ,p   pad ls',
+    \ '   <Space>b   unite buffer',
+    \ '   <Space>f   unite files',
+    \ '   <Space>y   unite yankring',
     \ '',
-    \ '   ,cm  make',
-    \ '   ,cc  close quickfix',
-    \ '   ,cf  vimfiler',
+    \ '   <Space>cm  make',
+    \ '   <Space>cc  close quickfix',
+    \ '   <Space>cf  vimfiler',
     \ ]
-
-function StartifiedPadLS()
-    :bd
-    :Pad ls
-endfunction
-
-autocmd User Startified nmap <buffer> ,p :<C-u>exec StartifiedPadLS()<CR>
 
 " EasyMotion
 " ----------
@@ -227,16 +207,7 @@ let g:EasyMotion_do_mapping = 0
 let g:EasyMotion_startofline = 0
 
 " mappings
-map <Space>s <Plug>(easymotion-s)
-map <Space>w <Plug>(easymotion-bd-w)
-map <Space>t <Plug>(easymotion-bd-t)
-map <Space>h <Plug>(easymotion-linebackward)
-map <Space>l <Plug>(easymotion-lineforward)
-
-map <Space>j <Plug>(easymotion-j)
-map <Space>k <Plug>(easymotion-k)
-map <Leader>J <Plug>(easymotion-sol-j)
-map <Leader>K <Plug>(easymotion-sol-k)
+map <Space><Space> <Plug>(easymotion-s)
 
 " colours
 hi link EasyMotionTarget Constant
@@ -247,10 +218,6 @@ hi link EasyMotionTarget2Second PreProc
 " Markdown
 " --------
 let g:vim_markdown_folding_disabled=1
-
-" Neco-GHC
-" --------
-let g:necoghc_enable_detailed_browse = 1
 
 " Neocomplete
 " -----------
@@ -269,42 +236,20 @@ let g:unite_split_rule = 'botright'
 call unite#custom#profile('files', 'context.ignorecase', 1)
 let g:unite_source_rec_async_command =
                 \ 'ag --follow --nocolor --nogroup -g ""'
-nnoremap ,f :<C-u>Unite -buffer-name=files -profile-name=files -start-insert
+nnoremap <Space>f :<C-u>Unite -buffer-name=files -profile-name=files -start-insert
             \ file_rec/async:!<cr>
 
 " buffer related
-nnoremap ,b :<C-u>Unite -quick-match buffer<cr>
+nnoremap <Space>b :<C-u>Unite -quick-match buffer<cr>
 
 " other
 let g:unite_source_history_yank_enable = 1
-nnoremap ,y :<C-u>Unite history/yank<cr>
+nnoremap <Space>y :<C-u>Unite history/yank<cr>
 
 " VimFiler
 " --------
 autocmd FileType vimfiler setlocal nonumber
 autocmd FileType vimfiler setlocal norelativenumber
-
-" Vim2HS / Haskell
-" ----------------
-autocmd Syntax haskell setlocal foldlevel=2
-autocmd Syntax haskell setlocal foldcolumn=1
-autocmd FileType haskell compiler cabal
-autocmd FileType haskell setlocal makeprg=cabal\ build\ -v0
-autocmd BufWritePost *.hs GhcModCheckAsync
-
-" vim-pad
-" -------
-let g:pad#dir = '~/Dropbox/Notes/'
-let g:pad#set_mappings = 0
-let g:pad#open_in_split = 0
-let g:pad#search_backend = 'ag'
-let g:pad#highlight_query = 0
-let g:pad#jumpto_query = 0
-let g:pad#default_file_extension = '.md'
-let g:pad#window_height = 20
-let g:pad#query_filenames = 1
-let g:pad#rename_files = 0
-nnoremap ,p :<C-u>Pad ls<cr>
 
 " Key Mappings
 " ============
@@ -315,18 +260,13 @@ let mapleader="\\"
 " disable Q -> ex mode
 nnoremap Q <nop>
 
-" use ,, as a single ,
-nnoremap ,, ,
-
-" map jj to <esc> to keep fingers on home keys (insert mode only)
-inoremap jj <esc>
-inoremap jk <esc>
+" map kj to <esc> to keep fingers on home keys (insert mode only)
 inoremap kj <esc>
 
 " Vim housekeeping
-nmap ,ve :e $MYVIMRC<cr>
-nmap ,vs :so $MYVIMRC<cr>
-nmap ,vh :so $VIMRUNTIME/syntax/hitest.vim<cr>
+nmap <Space>ve :e $MYVIMRC<cr>
+nmap <Space>vs :so $MYVIMRC<cr>
+nmap <Space>vh :so $VIMRUNTIME/syntax/hitest.vim<cr>
 nmap <silent> ,vg
  \ :echo "hi<".synIDattr(synID(line("."),col("."),1),"name").'>'
  \ . ' trans<' . synIDattr(synID(line("."),col("."),0),"name") . "> lo<"
@@ -335,9 +275,9 @@ nmap <silent> ,vg
  \ synIDattr(synIDtrans(synID(line("."),col("."),1)),"name")<CR>
 
 " Compile commands
-nmap ,cm :Make<cr>
-nmap ,cc :cclose<cr>
-nmap ,cf :<C-u>VimFilerExplorer -toggle -winwidth=30<CR>
+nmap <Space>cm :Make<cr>
+nmap <Space>cc :cclose<cr>
+nmap <Space>cf :<C-u>VimFilerExplorer -toggle -winwidth=30<CR>
 
 " don't allow arrow keys
 noremap <up> <nop>
