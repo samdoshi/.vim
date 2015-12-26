@@ -104,9 +104,7 @@ set incsearch
 set backspace=indent,eol,start
 
 " tab width
-" set tabstop=4
-" set shiftwidth=4
-" set expandtab
+set tabstop=4
 
 " allow unsaved buffers to be hidden
 set hidden
