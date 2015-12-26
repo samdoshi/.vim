@@ -54,6 +54,8 @@ NeoBundle 'tpope/vim-fugitive'
 
 NeoBundle 'tpope/vim-repeat'
 
+NeoBundle 'tpope/vim-sleuth'
+
 NeoBundle 'tpope/vim-surround'
 
 NeoBundle 'tsukkee/unite-tag'
@@ -102,9 +104,9 @@ set incsearch
 set backspace=indent,eol,start
 
 " tab width
-set tabstop=4
-set shiftwidth=4
-set expandtab
+" set tabstop=4
+" set shiftwidth=4
+" set expandtab
 
 " allow unsaved buffers to be hidden
 set hidden
