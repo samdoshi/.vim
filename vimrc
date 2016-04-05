@@ -25,6 +25,8 @@ NeoBundle 'bling/vim-airline'
 
 NeoBundle 'bling/vim-bufferline'
 
+NeoBundle 'editorconfig/editorconfig-vim'
+
 NeoBundle 'Lokaltog/vim-easymotion'
 
 NeoBundle 'mhinz/vim-signify'
