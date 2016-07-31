@@ -1,59 +1,38 @@
-" using https://github.com/Shougo/neobundle.vim
-" to install enter the following on the command line
-" git clone https://github.com/Shougo/neobundle.vim ~/.vim/bundle/neobundle.vim
+" start
+call plug#begin('~/.vim/bundle/')
 
-if has('vim_starting')
-    " drop vi support, enables enhanced vim features
-    set nocompatible
+Plug 'ap/vim-css-color'
 
-    " add neobundle to run time path
-    set runtimepath+=~/.vim/bundle/neobundle.vim/
-endif
+Plug 'bling/vim-airline'
 
-" start neobundle
-call neobundle#begin(expand('~/.vim/bundle/'))
+Plug 'bling/vim-bufferline'
 
-" let neobundle mange itself
-NeoBundleFetch 'Shougo/neobundle.vim'
+Plug 'editorconfig/editorconfig-vim'
 
-" Bundles
-" =======
+Plug 'Lokaltog/vim-easymotion'
 
-NeoBundle 'ap/vim-css-color'
+Plug 'mhinz/vim-signify'
 
-NeoBundle 'bling/vim-airline'
+Plug 'mhinz/vim-startify'
 
-NeoBundle 'bling/vim-bufferline'
+Plug 'plasticboy/vim-markdown'
 
-NeoBundle 'editorconfig/editorconfig-vim'
+Plug 'tpope/vim-dispatch'
 
-NeoBundle 'Lokaltog/vim-easymotion'
+Plug 'tpope/vim-fugitive'
 
-NeoBundle 'mhinz/vim-signify'
+Plug 'tpope/vim-repeat'
 
-NeoBundle 'mhinz/vim-startify'
+Plug 'tpope/vim-sleuth'
 
-NeoBundle 'plasticboy/vim-markdown'
+Plug 'tpope/vim-surround'
 
-NeoBundle 'tpope/vim-dispatch'
-
-NeoBundle 'tpope/vim-fugitive'
-
-NeoBundle 'tpope/vim-repeat'
-
-NeoBundle 'tpope/vim-sleuth'
-
-NeoBundle 'tpope/vim-surround'
-
-NeoBundle 'tsukkee/unite-tag'
+Plug 'tsukkee/unite-tag'
 
 " load plugins
-call neobundle#end()
+call plug#end()
 
-" required by neobundle
 filetype plugin indent on
-
-NeoBundleCheck
 
 " VIM Settings
 " ============
