@@ -33,21 +33,6 @@ NeoBundle 'mhinz/vim-signify'
 
 NeoBundle 'mhinz/vim-startify'
 
-NeoBundle 'Shougo/neocomplete.vim'
-
-NeoBundle 'Shougo/vimfiler.vim'
-
-NeoBundle 'Shougo/vimproc.vim', {
-    \ 'build' : {
-    \     'windows' : 'make -f make_mingw32.mak',
-    \     'cygwin' : 'make -f make_cygwin.mak',
-    \     'mac' : 'make -f make_mac.mak',
-    \     'unix' : 'make -f make_unix.mak',
-    \    }
-    \ }
-
-NeoBundle 'Shougo/unite.vim'
-
 NeoBundle 'plasticboy/vim-markdown'
 
 NeoBundle 'tpope/vim-dispatch'
@@ -220,38 +205,6 @@ hi link EasyMotionTarget2Second PreProc
 " Markdown
 " --------
 let g:vim_markdown_folding_disabled=1
-
-" Neocomplete
-" -----------
-" Use neocomplete.
-let g:neocomplete#enable_at_startup = 1
-" Use smartcase.
-let g:neocomplete#enable_smart_case = 1
-" <TAB>: completion.
-inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
-
-" Unite
-" -----
-let g:unite_split_rule = 'botright'
-
-" file related
-call unite#custom#profile('files', 'context.ignorecase', 1)
-let g:unite_source_rec_async_command =
-                \ 'ag --follow --nocolor --nogroup -g ""'
-nnoremap <Space>f :<C-u>Unite -buffer-name=files -profile-name=files -start-insert
-            \ file_rec/async:!<cr>
-
-" buffer related
-nnoremap <Space>b :<C-u>Unite -quick-match buffer<cr>
-
-" other
-let g:unite_source_history_yank_enable = 1
-nnoremap <Space>y :<C-u>Unite history/yank<cr>
-
-" VimFiler
-" --------
-autocmd FileType vimfiler setlocal nonumber
-autocmd FileType vimfiler setlocal norelativenumber
 
 " Key Mappings
 " ============
