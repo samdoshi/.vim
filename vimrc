@@ -156,13 +156,17 @@ let g:signify_vcs_list = [ 'git' ]
 let g:startify_custom_header = map(split(system('fortune -s -n 300 | cowsay'), '\n'), '"   ". v:val') + ['','']
 let g:startify_custom_footer = [
     \ '',
-    \ '   <Space>b   unite buffer',
-    \ '   <Space>f   unite files',
-    \ '   <Space>y   unite yankring',
+    \ '   <Space>b      unite buffer',
+    \ '   <Space>f      unite files',
+    \ '   <Space>y      unite yankring',
     \ '',
-    \ '   <Space>cm  make',
-    \ '   <Space>cc  close quickfix',
-    \ '   <Space>cf  vimfiler',
+    \ '   <Space>cm     make',
+    \ '   <Space>cc     close quickfix',
+    \ '   <Space>cf     vimfiler',
+    \ '',
+    \ '   :PlugStatus   plug status',
+    \ '   :PlugUpdate   install or update plugins',
+    \ '   :PlugUpgrade  upgrade vim-plug'
     \ ]
 
 " EasyMotion
