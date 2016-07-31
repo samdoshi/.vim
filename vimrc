@@ -1,38 +1,24 @@
-" start
+" start plugin list
 call plug#begin('~/.vim/bundle/')
 
 Plug 'ap/vim-css-color'
-
 Plug 'bling/vim-bufferline'
-
 Plug 'editorconfig/editorconfig-vim'
-
 Plug 'Lokaltog/vim-easymotion'
-
 Plug 'mhinz/vim-signify'
-
 Plug 'mhinz/vim-startify'
-
 Plug 'plasticboy/vim-markdown'
-
 Plug 'tpope/vim-dispatch'
-
 Plug 'tpope/vim-fugitive'
-
 Plug 'tpope/vim-repeat'
-
 Plug 'tpope/vim-sleuth'
-
 Plug 'tpope/vim-surround'
-
 Plug 'vim-airline/vim-airline'
-
 Plug 'vim-airline/vim-airline-themes'
 
 " load plugins
 call plug#end()
 
-filetype plugin indent on
 
 " VIM Settings
 " ============
@@ -101,6 +87,9 @@ set foldlevelstart=99
 
 " enable syntax highlighting
 syntax on
+
+" indent source code
+filetype plugin indent on
 
 " GUI / Terminal Options
 " ======================
