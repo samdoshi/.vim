@@ -25,8 +25,6 @@ Plug 'tpope/vim-sleuth'
 
 Plug 'tpope/vim-surround'
 
-Plug 'tsukkee/unite-tag'
-
 Plug 'vim-airline/vim-airline'
 
 Plug 'vim-airline/vim-airline-themes'
