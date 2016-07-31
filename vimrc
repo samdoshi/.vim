@@ -3,8 +3,6 @@ call plug#begin('~/.vim/bundle/')
 
 Plug 'ap/vim-css-color'
 
-Plug 'bling/vim-airline'
-
 Plug 'bling/vim-bufferline'
 
 Plug 'editorconfig/editorconfig-vim'
@@ -28,6 +26,10 @@ Plug 'tpope/vim-sleuth'
 Plug 'tpope/vim-surround'
 
 Plug 'tsukkee/unite-tag'
+
+Plug 'vim-airline/vim-airline'
+
+Plug 'vim-airline/vim-airline-themes'
 
 " load plugins
 call plug#end()
