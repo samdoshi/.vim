@@ -107,6 +107,7 @@ if has("gui_running")
     colorscheme base16-custom
 else
     set background=dark
+    let base16colorspace=256
     colorscheme base16-custom
 endif
 
