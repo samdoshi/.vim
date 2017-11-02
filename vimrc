@@ -4,6 +4,7 @@ call plug#begin('~/.vim/bundle/')
 Plug 'ap/vim-css-color'
 Plug 'bling/vim-bufferline'
 Plug 'editorconfig/editorconfig-vim'
+Plug 'houtsnip/vim-emacscommandline'
 Plug 'Lokaltog/vim-easymotion'
 Plug 'mhinz/vim-signify'
 Plug 'mhinz/vim-startify'
