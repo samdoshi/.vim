@@ -93,6 +93,9 @@ syntax on
 " indent source code
 filetype plugin indent on
 
+" spelling language
+set spelllang=en_gb
+
 " GUI / Terminal Options
 " ======================
 if has("gui_running")
